@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 posts = [
     {
-        'author': 'Destiny Franks',
+        'author': 'Santiago Ocampo',
         'title': 'Blog Post 1',
         'content': 'This is my first blog post',
         'date_posted': '12th June, 2024',
@@ -25,4 +25,7 @@ def home(request):
     return render(request, 'blog/home.html', context)
 
 def about(request):
+    return render(request, 'blog/about.html', {'title': 'About Page'})
+
+def login(request):
     return render(request, 'blog/about.html', {'title': 'About Page'})
